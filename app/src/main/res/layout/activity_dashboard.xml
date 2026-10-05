@@ -1,0 +1,269 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F8FC"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="20dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="22dp"
+            android:background="#123B65">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TravelMate"
+                    android:textColor="#FFFFFF"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Discover your next adventure"
+                    android:textColor="#D8E9F9"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:text="✈"
+                android:textSize="27sp"
+                android:background="#28577F"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <!-- Welcome -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Explore Bangladesh"
+            android:textColor="#172B4D"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Find beautiful places and plan your journey."
+            android:textColor="#65758B"
+            android:textSize="14sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="6dp" />
+
+        <!-- Search -->
+        <EditText
+            android:id="@+id/searchInput"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:background="#FFFFFF"
+            android:hint="Search places, hotels..."
+            android:paddingHorizontal="16dp"
+            android:singleLine="true"
+            android:inputType="text"
+            android:elevation="3dp"
+            android:textColor="#172B4D"
+            android:textColorHint="#8492A6" />
+
+        <!-- Featured destination -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Featured Destination"
+            android:textColor="#172B4D"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="26dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="12dp"
+            android:background="#DCEAF7"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🌊  COX'S BAZAR"
+                android:textColor="#123B65"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Discover the world's longest natural sea beach."
+                android:textColor="#365675"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Explore now  →"
+                android:textColor="#087E8B"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp" />
+        </LinearLayout>
+
+        <!-- Categories -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Plan Your Trip"
+            android:textColor="#172B4D"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="14dp">
+
+            <Button
+                android:id="@+id/btnPlaces"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="6dp"
+                android:text="📍\nExplore Places"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:backgroundTint="#1769AA" />
+
+            <Button
+                android:id="@+id/btnHotels"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="6dp"
+                android:text="🛏\nHotels"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:backgroundTint="#087E8B" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="14dp"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/btnRestaurants"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="6dp"
+                android:text="🍽\nRestaurants"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:backgroundTint="#E88735" />
+
+            <Button
+                android:id="@+id/btnTransport"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="6dp"
+                android:text="🚌\nTransport"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:backgroundTint="#7556A8" />
+        </LinearLayout>
+
+        <!-- Booking -->
+        <Button
+            android:id="@+id/btnBooking"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="22dp"
+            android:text="My Bookings  →"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="#123B65" />
+
+        <!-- Bottom navigation placeholder -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="18dp"
+            android:background="#FFFFFF">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="⌂\nHome"
+                android:textColor="#1769AA"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="⌕\nExplore"
+                android:textColor="#65758B"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="▣\nBookings"
+                android:textColor="#65758B"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="♙\nProfile"
+                android:textColor="#65758B"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
