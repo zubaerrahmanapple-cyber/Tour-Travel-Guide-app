@@ -1,23 +1,26 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F8FC"
+    android:background="#F4F7FA"
     android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingBottom="20dp">
+        android:paddingBottom="25dp">
 
-        <!-- Header -->
+        <!-- TOP NAVBAR -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_height="82dp"
+            android:background="#123B5D"
             android:gravity="center_vertical"
-            android:padding="22dp"
-            android:background="#123B65">
+            android:orientation="horizontal"
+            android:paddingStart="20dp"
+            android:paddingEnd="16dp">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -30,240 +33,422 @@
                     android:layout_height="wrap_content"
                     android:text="TravelMate"
                     android:textColor="#FFFFFF"
-                    android:textSize="28sp"
+                    android:textSize="25sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Discover your next adventure"
-                    android:textColor="#D8E9F9"
-                    android:textSize="14sp"
-                    android:layout_marginTop="4dp" />
+                    android:layout_marginTop="3dp"
+                    android:text="Explore • Discover • Travel"
+                    android:textColor="#C9DCE8"
+                    android:textSize="12sp" />
+
             </LinearLayout>
 
             <TextView
+                android:id="@+id/menuButton"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:background="#245473"
                 android:gravity="center"
-                android:text="✈"
-                android:textSize="27sp"
-                android:background="#28577F"
-                android:textColor="#FFFFFF" />
-        </LinearLayout>
-
-        <!-- Welcome -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Explore Bangladesh"
-            android:textColor="#172B4D"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="24dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Find beautiful places and plan your journey."
-            android:textColor="#65758B"
-            android:textSize="14sp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="6dp" />
-
-        <!-- Search -->
-        <EditText
-            android:id="@+id/searchInput"
-            android:layout_width="match_parent"
-            android:layout_height="54dp"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="20dp"
-            android:background="#FFFFFF"
-            android:hint="Search places, hotels..."
-            android:paddingHorizontal="16dp"
-            android:singleLine="true"
-            android:inputType="text"
-            android:elevation="3dp"
-            android:textColor="#172B4D"
-            android:textColorHint="#8492A6" />
-
-        <!-- Featured destination -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Featured Destination"
-            android:textColor="#172B4D"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="26dp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="12dp"
-            android:background="#DCEAF7"
-            android:orientation="vertical"
-            android:gravity="center_vertical"
-            android:padding="20dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="🌊  COX'S BAZAR"
-                android:textColor="#123B65"
+                android:text="☰"
+                android:textColor="#FFFFFF"
                 android:textSize="23sp"
-                android:textStyle="bold" />
+                android:clickable="true"
+                android:focusable="true" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Discover the world's longest natural sea beach."
-                android:textColor="#365675"
-                android:textSize="14sp"
-                android:layout_marginTop="10dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Explore now  →"
-                android:textColor="#087E8B"
-                android:textStyle="bold"
-                android:layout_marginTop="10dp" />
         </LinearLayout>
 
-        <!-- Categories -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Plan Your Trip"
-            android:textColor="#172B4D"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="26dp"
-            android:layout_marginBottom="12dp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingHorizontal="14dp">
+        <!-- SEARCH BAR -->
 
-            <Button
-                android:id="@+id/btnPlaces"
-                android:layout_width="0dp"
-                android:layout_height="110dp"
-                android:layout_weight="1"
-                android:layout_marginHorizontal="6dp"
-                android:text="📍\nExplore Places"
-                android:textAllCaps="false"
-                android:textSize="14sp"
-                android:backgroundTint="#1769AA" />
-
-            <Button
-                android:id="@+id/btnHotels"
-                android:layout_width="0dp"
-                android:layout_height="110dp"
-                android:layout_weight="1"
-                android:layout_marginHorizontal="6dp"
-                android:text="🛏\nHotels"
-                android:textAllCaps="false"
-                android:textSize="14sp"
-                android:backgroundTint="#087E8B" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingHorizontal="14dp"
-            android:layout_marginTop="10dp">
-
-            <Button
-                android:id="@+id/btnRestaurants"
-                android:layout_width="0dp"
-                android:layout_height="100dp"
-                android:layout_weight="1"
-                android:layout_marginHorizontal="6dp"
-                android:text="🍽\nRestaurants"
-                android:textAllCaps="false"
-                android:textSize="14sp"
-                android:backgroundTint="#E88735" />
-
-            <Button
-                android:id="@+id/btnTransport"
-                android:layout_width="0dp"
-                android:layout_height="100dp"
-                android:layout_weight="1"
-                android:layout_marginHorizontal="6dp"
-                android:text="🚌\nTransport"
-                android:textAllCaps="false"
-                android:textSize="14sp"
-                android:backgroundTint="#7556A8" />
-        </LinearLayout>
-
-        <!-- Booking -->
-        <Button
-            android:id="@+id/btnBooking"
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="58dp"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="22dp"
-            android:text="My Bookings  →"
-            android:textAllCaps="false"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:backgroundTint="#123B65" />
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="20dp"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="5dp">
 
-        <!-- Bottom navigation placeholder -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingEnd="12dp">
+
+                <TextView
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="🔍"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/searchInput"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:hint="Search places, hotels..."
+                    android:paddingStart="5dp"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- WELCOME -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="20dp"
+            android:text="Explore Bangladesh"
+            android:textColor="#123B5D"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:text="Find beautiful places and plan your perfect journey."
+            android:textColor="#71808C"
+            android:textSize="13sp" />
+
+
+        <!-- FEATURED DESTINATION -->
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="20dp"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="6dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cox" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#66000000" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FEATURED DESTINATION"
+                        android:textColor="#D8F7FF"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Cox's Bazar"
+                        android:textColor="#FFFFFF"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="The world's longest natural sea beach"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- SECTION TITLE -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="20dp"
+            android:text="Plan Your Trip"
+            android:textColor="#123B5D"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <!-- FIRST ROW -->
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginTop="18dp"
-            android:background="#FFFFFF">
+            android:layout_height="145dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="⌂\nHome"
-                android:textColor="#1769AA"
-                android:textStyle="bold"
-                android:textSize="14sp" />
+            <!-- PLACES -->
 
-            <TextView
+            <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="7dp"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:text="⌕\nExplore"
-                android:textColor="#65758B"
-                android:textSize="14sp" />
+                app:cardBackgroundColor="#1677B8"
+                app:cardCornerRadius="22dp"
+                app:cardElevation="5dp">
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="▣\nBookings"
-                android:textColor="#65758B"
-                android:textSize="14sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp">
 
-            <TextView
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📍"
+                        android:textSize="30sp" />
+
+                    <Button
+                        android:id="@+id/btnPlaces"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:backgroundTint="#1677B8"
+                        android:text="Explore Places"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Discover destinations"
+                        android:textColor="#DCEEFF"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- HOTELS -->
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="7dp"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:text="♙\nProfile"
-                android:textColor="#65758B"
-                android:textSize="14sp" />
+                app:cardBackgroundColor="#118C91"
+                app:cardCornerRadius="22dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🏨"
+                        android:textSize="30sp" />
+
+                    <Button
+                        android:id="@+id/btnHotels"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:backgroundTint="#118C91"
+                        android:text="Hotels"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Find your stay"
+                        android:textColor="#D9FFFF"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
         </LinearLayout>
 
+
+        <!-- SECOND ROW -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="145dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal">
+
+            <!-- RESTAURANTS -->
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="7dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#E98A27"
+                app:cardCornerRadius="22dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🍽"
+                        android:textSize="30sp" />
+
+                    <Button
+                        android:id="@+id/btnRestaurants"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:backgroundTint="#E98A27"
+                        android:text="Restaurants"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Taste local food"
+                        android:textColor="#FFF1DF"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- TRANSPORT -->
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="7dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#7452AD"
+                app:cardCornerRadius="22dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🚌"
+                        android:textSize="30sp" />
+
+                    <Button
+                        android:id="@+id/btnTransport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:backgroundTint="#7452AD"
+                        android:text="Transport"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Plan your journey"
+                        android:textColor="#EEE4FF"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+        <!-- BOOKING CARD -->
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            app:cardBackgroundColor="#123B5D"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="5dp">
+
+            <Button
+                android:id="@+id/btnBooking"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="#123B5D"
+                android:text="🎫   MY BOOKINGS"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- FOOTER -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="TravelMate • Make every journey memorable ✈"
+            android:textColor="#8A98A3"
+            android:textSize="11sp" />
+
     </LinearLayout>
+
 </ScrollView>
