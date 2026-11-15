@@ -8,30 +8,36 @@
         android:label="Tour And Travel Guide"
         android:supportsRtl="true"
         android:theme="@style/Theme.ZeroBite">
-
+        <activity
+            android:name=".HotelDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AllPhotosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SpotDetailsActivity"
+            android:exported="false" />
         <activity
             android:name=".PlaceDetailsActivity"
             android:exported="false" />
-
         <activity
             android:name=".PlacesActivity"
             android:exported="false" />
-
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
-        </activity>
-
+            android:name=".HotelsActivity"
+            android:exported="false" />
         <activity
             android:name=".DashboardActivity"
             android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

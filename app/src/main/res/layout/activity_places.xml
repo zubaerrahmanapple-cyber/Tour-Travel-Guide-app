@@ -1,9 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F4F7FA">
+    android:background="#F4F7FA"
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -11,7 +14,6 @@
         android:orientation="vertical"
         android:paddingBottom="25dp">
 
-        <!-- HEADER -->
         <!-- HEADER -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -22,19 +24,17 @@
             android:paddingStart="12dp"
             android:paddingEnd="20dp">
 
-            <!-- BACK BUTTON -->
             <TextView
                 android:id="@+id/backButton"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:clickable="true"
+                android:focusable="true"
                 android:gravity="center"
                 android:text="‹"
                 android:textColor="#FFFFFF"
-                android:textSize="38sp"
-                android:clickable="true"
-                android:focusable="true" />
+                android:textSize="38sp" />
 
-            <!-- TITLE AREA -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -57,9 +57,7 @@
                     android:text="Discover beautiful destinations"
                     android:textColor="#C9DCE8"
                     android:textSize="12sp" />
-
             </LinearLayout>
-
         </LinearLayout>
 
         <!-- PAGE TITLE -->
@@ -74,7 +72,7 @@
             android:textSize="21sp"
             android:textStyle="bold" />
 
-        <!-- COX'S BAZAR CARD -->
+        <!-- COX'S BAZAR -->
         <androidx.cardview.widget.CardView
             android:id="@+id/coxBazarCard"
             android:layout_width="match_parent"
@@ -94,6 +92,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:contentDescription="Cox's Bazar sea beach"
                     android:scaleType="centerCrop"
                     android:src="@drawable/cox" />
 
@@ -132,101 +131,261 @@
                         android:text="The world's longest natural sea beach"
                         android:textColor="#FFFFFF"
                         android:textSize="12sp" />
-
                 </LinearLayout>
-
             </FrameLayout>
-
         </androidx.cardview.widget.CardView>
 
-        <!-- SAJEK CARD -->
+        <!-- SAJEK VALLEY -->
         <androidx.cardview.widget.CardView
+            android:id="@+id/sajekCard"
             android:layout_width="match_parent"
-            android:layout_height="180dp"
+            android:layout_height="220dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="20dp"
+            android:clickable="true"
+            android:focusable="true"
             app:cardCornerRadius="22dp"
-            app:cardElevation="5dp">
+            app:cardElevation="6dp">
 
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="20dp">
+                android:layout_height="match_parent">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="Sajek Valley"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/sajek" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#66000000" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="🏔️"
-                    android:textSize="42sp" />
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical"
+                    android:padding="18dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Sajek Valley"
-                    android:textColor="#123B5D"
-                    android:textSize="22sp"
-                    android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="★★★★★  4.8"
+                        android:textColor="#FFD166"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="Clouds, mountains &amp; nature"
-                    android:textColor="#71808C"
-                    android:textSize="12sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Sajek Valley"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
 
-            </LinearLayout>
-
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Clouds, mountains &amp; nature"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </FrameLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- SAINT MARTIN CARD -->
+        <!-- SYLHET -->
         <androidx.cardview.widget.CardView
+            android:id="@+id/sylhetCard"
             android:layout_width="match_parent"
-            android:layout_height="180dp"
+            android:layout_height="220dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="20dp"
+            android:clickable="true"
+            android:focusable="true"
             app:cardCornerRadius="22dp"
-            app:cardElevation="5dp">
+            app:cardElevation="6dp">
 
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="20dp">
+                android:layout_height="match_parent">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="Sylhet"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/sylhet" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#66000000" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="🏝️"
-                    android:textSize="42sp" />
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical"
+                    android:padding="18dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="★★★★★  4.8"
+                        android:textColor="#FFD166"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Sylhet"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tea gardens, rivers &amp; waterfalls"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- BANDARBAN -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bandarbanCard"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="6dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="Bandarban"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bandarban" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#66000000" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Saint Martin's Island"
-                    android:textColor="#123B5D"
-                    android:textSize="22sp"
-                    android:textStyle="bold" />
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical"
+                    android:padding="18dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="★★★★★  4.8"
+                        android:textColor="#FFD166"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Bandarban"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Majestic hills &amp; mountain views"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- SUNDARBANS -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sundarbanCard"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="6dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="Sundarbans"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/sundarbans" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#66000000" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="Crystal water And coral island"
-                    android:textColor="#71808C"
-                    android:textSize="12sp" />
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical"
+                    android:padding="18dp">
 
-            </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="★★★★★  4.8"
+                        android:textColor="#FFD166"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Sundarbans"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="World's largest mangrove forest"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </FrameLayout>
         </androidx.cardview.widget.CardView>
 
     </LinearLayout>
-
 </ScrollView>

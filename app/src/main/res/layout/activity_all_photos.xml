@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F4F7FA">
+
+    <!-- HEADER -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="18dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/photosBackButton"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:gravity="center"
+            android:text="‹"
+            android:textSize="36sp"
+            android:textColor="#123B5D"
+            android:background="#FFFFFF"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Photo Gallery"
+                android:textColor="#123B5D"
+                android:textSize="23sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/photosPlaceName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Explore beautiful destinations"
+                android:textColor="#71808C"
+                android:textSize="13sp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- PHOTO GRID -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <GridLayout
+            android:id="@+id/photosGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="20dp">
+
+            <ImageView
+                android:id="@+id/photo1"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:scaleType="centerCrop"
+                android:background="#E0E8EF"
+                android:contentDescription="Photo 1"/>
+
+            <ImageView
+                android:id="@+id/photo2"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:scaleType="centerCrop"
+                android:background="#E0E8EF"
+                android:contentDescription="Photo 2"/>
+
+            <ImageView
+                android:id="@+id/photo3"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:scaleType="centerCrop"
+                android:background="#E0E8EF"
+                android:contentDescription="Photo 3"/>
+
+            <ImageView
+                android:id="@+id/photo4"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:scaleType="centerCrop"
+                android:background="#E0E8EF"
+                android:contentDescription="Photo 4"/>
+
+            <ImageView
+                android:id="@+id/photo5"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:scaleType="centerCrop"
+                android:background="#E0E8EF"
+                android:contentDescription="Photo 5"/>
+
+            <ImageView
+                android:id="@+id/photo6"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:scaleType="centerCrop"
+                android:background="#E0E8EF"
+                android:contentDescription="Photo 6"/>
+
+            <ImageView
+                android:id="@+id/photo7"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:scaleType="centerCrop"
+                android:background="#E0E8EF"
+                android:contentDescription="Photo 7"/>
+
+            <ImageView
+                android:id="@+id/photo8"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:scaleType="centerCrop"
+                android:background="#E0E8EF"
+                android:contentDescription="Photo 8"/>
+
+            <ImageView
+                android:id="@+id/photo9"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:scaleType="centerCrop"
+                android:background="#E0E8EF"
+                android:contentDescription="Photo 9"/>
+
+            <ImageView
+                android:id="@+id/photo10"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:scaleType="centerCrop"
+                android:background="#E0E8EF"
+                android:contentDescription="Photo 10"/>
+
+        </GridLayout>
+    </ScrollView>
+
+</LinearLayout>

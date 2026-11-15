@@ -1,137 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5FAF9"
+    android:background="#F3F7FA"
     android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="24dp"
-        android:gravity="center_horizontal">
+        android:paddingBottom="30dp">
 
-        <!-- Logo / App Name -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="45dp"
-            android:text="✈"
-            android:textColor="#0FA88A"
-            android:textSize="48sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="TravelMate"
-            android:textColor="#123B5D"
-            android:textSize="32sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="Explore  •  Discover  •  Travel"
-            android:textColor="#6B7C89"
-            android:textSize="14sp" />
-
-        <!-- Welcome -->
-        <TextView
+        <!-- PREMIUM HEADER -->
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="55dp"
-            android:text="Welcome Back"
-            android:textColor="#123B5D"
-            android:textSize="26sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:text="Login to continue your journey"
-            android:textColor="#71808C"
-            android:textSize="14sp" />
-
-        <!-- Email -->
-        <EditText
-            android:id="@+id/emailInput"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginTop="25dp"
-            android:background="#FFFFFF"
-            android:hint="Email or Phone Number"
-            android:inputType="textEmailAddress"
-            android:padding="16dp"
-            android:textSize="14sp" />
-
-        <!-- Password -->
-        <EditText
-            android:id="@+id/passwordInput"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginTop="12dp"
-            android:background="#FFFFFF"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:padding="16dp"
-            android:textSize="14sp" />
-
-        <!-- Forgot Password -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="end"
-            android:text="Forgot Password?"
-            android:textColor="#0FA88A"
-            android:textSize="13sp" />
-
-        <!-- Login Button -->
-        <Button
-            android:id="@+id/loginButton"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginTop="22dp"
-            android:backgroundTint="#0FA88A"
-            android:text="LOGIN  →"
-            android:textColor="#FFFFFF"
-            android:textSize="15sp"
-            android:textStyle="bold" />
-
-        <!-- Divider -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="22dp"
+            android:layout_height="245dp"
+            android:background="#102D46"
             android:gravity="center"
-            android:text="────────────  or  ────────────"
-            android:textColor="#AAB5BC"
-            android:textSize="12sp" />
+            android:orientation="vertical"
+            android:padding="24dp">
 
-        <!-- Register -->
-        <Button
-            android:id="@+id/registerButton"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✈"
+                android:textColor="#FFFFFF"
+                android:textSize="52sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="TravelMate"
+                android:textColor="#FFFFFF"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:letterSpacing="0.12"
+                android:text="EXPLORE  •  DISCOVER  •  TRAVEL"
+                android:textColor="#B9D0DF"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:text="Your next adventure awaits"
+                android:textColor="#DCEAF2"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <!-- LOGIN CARD -->
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginTop="18dp"
-            android:backgroundTint="#FFFFFF"
-            android:text="CREATE ACCOUNT"
-            android:textColor="#0FA88A"
-            android:textSize="14sp"
-            android:textStyle="bold" />
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="-25dp"
+            android:layout_marginEnd="20dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="7dp">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="23dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome Back"
+                    android:textColor="#102D46"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Sign in to continue your journey."
+                    android:textColor="#82909B"
+                    android:textSize="13sp" />
+
+                <!-- EMAIL LABEL -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="27dp"
+                    android:text="EMAIL OR PHONE NUMBER"
+                    android:textColor="#40566A"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <!-- EMAIL INPUT -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="9dp"
+                    app:cardBackgroundColor="#F5F8FA"
+                    app:cardCornerRadius="13dp"
+                    app:cardElevation="0dp">
+
+                    <EditText
+                        android:id="@+id/emailInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:hint="Enter your email or phone"
+                        android:inputType="textEmailAddress"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:singleLine="true"
+                        android:textColor="#102D46"
+                        android:textColorHint="#9AA7B1"
+                        android:textSize="14sp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- PASSWORD LABEL -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="19dp"
+                    android:text="PASSWORD"
+                    android:textColor="#40566A"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <!-- PASSWORD INPUT -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="9dp"
+                    app:cardBackgroundColor="#F5F8FA"
+                    app:cardCornerRadius="13dp"
+                    app:cardElevation="0dp">
+
+                    <EditText
+                        android:id="@+id/passwordInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:hint="Enter your password"
+                        android:inputType="textPassword"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:singleLine="true"
+                        android:textColor="#102D46"
+                        android:textColorHint="#9AA7B1"
+                        android:textSize="14sp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- FORGOT PASSWORD -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:gravity="end"
+                    android:text="Forgot Password?"
+                    android:textColor="#0FA88A"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <!-- LOGIN BUTTON -->
+                <Button
+                    android:id="@+id/loginButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="24dp"
+                    android:backgroundTint="#0FA88A"
+                    android:elevation="3dp"
+                    android:text="SIGN IN   →"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <!-- DIVIDER -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="23dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="#E3E9ED" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:text="NEW TO TRAVELMATE?"
+                        android:textColor="#94A1AA"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="#E3E9ED" />
+
+                </LinearLayout>
+
+                <!-- REGISTER BUTTON -->
+                <Button
+                    android:id="@+id/registerButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="#EAF7F4"
+                    android:text="CREATE YOUR ACCOUNT"
+                    android:textColor="#0B9479"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- FOOTER -->
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:text="Your journey starts here ✨"
-            android:textColor="#7B8993"
-            android:textSize="13sp" />
+            android:gravity="center"
+            android:text="DISCOVER MORE. TRAVEL FURTHER. ✈"
+            android:textColor="#84939E"
+            android:textSize="10sp"
+            android:letterSpacing="0.08" />
 
     </LinearLayout>
 

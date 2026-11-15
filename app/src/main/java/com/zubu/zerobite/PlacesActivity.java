@@ -1,3 +1,4 @@
+
 package com.zubu.zerobite;
 
 import android.content.Intent;
@@ -9,33 +10,59 @@ import androidx.cardview.widget.CardView;
 
 public class PlacesActivity extends AppCompatActivity {
 
-    CardView coxBazarCard;
+    CardView coxBazarCard, sajekCard, sylhetCard,
+            bandarbanCard, sundarbanCard;
+
     TextView backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_places);
 
-        // Back Button
+        // FIND VIEWS
         backButton = findViewById(R.id.backButton);
 
-        backButton.setOnClickListener(v -> {
-            finish();
-        });
-
-        // Cox's Bazar Card
         coxBazarCard = findViewById(R.id.coxBazarCard);
+        sajekCard = findViewById(R.id.sajekCard);
+        sylhetCard = findViewById(R.id.sylhetCard);
+        bandarbanCard = findViewById(R.id.bandarbanCard);
+        sundarbanCard = findViewById(R.id.sundarbanCard);
 
-        coxBazarCard.setOnClickListener(v -> {
+        // BACK BUTTON
+        backButton.setOnClickListener(v -> finish());
 
-            Intent intent = new Intent(
-                    PlacesActivity.this,
-                    PlaceDetailsActivity.class
-            );
+        // COX'S BAZAR
+        coxBazarCard.setOnClickListener(v ->
+                openDestination("Cox's Bazar"));
 
-            startActivity(intent);
-        });
+        // SAJEK VALLEY
+        sajekCard.setOnClickListener(v ->
+                openDestination("Sajek Valley"));
+
+        // SYLHET
+        sylhetCard.setOnClickListener(v ->
+                openDestination("Sylhet"));
+
+        // BANDARBAN
+        bandarbanCard.setOnClickListener(v ->
+                openDestination("Bandarban"));
+
+        // SUNDARBANS
+        sundarbanCard.setOnClickListener(v ->
+                openDestination("Sundarbans"));
+    }
+
+    // OPEN DESTINATION DETAILS
+    private void openDestination(String destination) {
+
+        Intent intent = new Intent(
+                PlacesActivity.this,
+                PlaceDetailsActivity.class
+        );
+
+        intent.putExtra("destination", destination);
+
+        startActivity(intent);
     }
 }

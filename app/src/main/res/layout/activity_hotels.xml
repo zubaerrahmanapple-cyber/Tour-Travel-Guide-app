@@ -2,9 +2,11 @@
 
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F7FA">
+    android:background="#F4F7FA"
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,216 +14,486 @@
         android:orientation="vertical"
         android:paddingBottom="30dp">
 
-        <!-- Header -->
+        <!-- PREMIUM HEADER -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="105dp"
+            android:layout_height="205dp"
             android:orientation="vertical"
             android:gravity="center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:background="#123B5D">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TRAVELMATE  /  STAYS"
+                android:textColor="#C5DCE9"
+                android:textSize="11sp"
+                android:letterSpacing="0.15"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Find Your&#10;Perfect Stay."
+                android:textColor="#FFFFFF"
+                android:textSize="32sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:text="Discover exceptional places to stay."
+                android:textColor="#D5E5EF"
+                android:textSize="13sp"/>
+
+        </LinearLayout>
+
+        <!-- MAIN CONTENT -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
-            android:background="#1976D2">
+            android:paddingTop="25dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hotels"
-                android:textColor="#FFFFFF"
-                android:textSize="28sp"
+                android:text="Explore Hotels"
+                android:textColor="#123B5D"
+                android:textSize="23sp"
                 android:textStyle="bold"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="Find the perfect stay for your trip"
-                android:textColor="#E3F2FD"
-                android:textSize="14sp"/>
+                android:layout_marginTop="5dp"
+                android:text="Find a beautiful place for your next journey."
+                android:textColor="#788795"
+                android:textSize="13sp"/>
 
-        </LinearLayout>
-
-        <!-- Search -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_margin="16dp"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:paddingStart="15dp"
-            android:paddingEnd="15dp"
-            android:background="#FFFFFF"
-            android:elevation="3dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="🔍"
-                android:textSize="20sp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:text="Search hotels..."
-                android:textColor="#777777"
-                android:textSize="15sp"/>
-
-        </LinearLayout>
-
-        <!-- Section Title -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="5dp"
-            android:text="Popular Hotels"
-            android:textColor="#222222"
-            android:textSize="22sp"
-            android:textStyle="bold"/>
-
-        <!-- Hotel 1 -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="12dp"
-            android:orientation="vertical"
-            android:background="#FFFFFF"
-            android:elevation="4dp">
-
-            <ImageView
+            <!-- SEARCH BAR -->
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="130dp"
-                android:src="@drawable/cox"
-                android:scaleType="centerCrop"/>
+                android:layout_height="58dp"
+                android:layout_marginTop="22dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:background="#FFFFFF"
+                android:elevation="3dp">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⌕"
+                    android:textColor="#123B5D"
+                    android:textSize="27sp"/>
+
+                <EditText
+                    android:id="@+id/hotelSearchInput"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="12dp"
+                    android:background="@android:color/transparent"
+                    android:hint="Search hotels or destinations"
+                    android:textColor="#123B5D"
+                    android:textColorHint="#9AA7B2"
+                    android:textSize="14sp"
+                    android:singleLine="true"
+                    android:inputType="text"/>
+
+            </LinearLayout>
+
+            <!-- DESTINATION FILTER TITLE -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="10dp"
-                android:text="Sea Pearl Beach Resort"
-                android:textColor="#222222"
+                android:layout_marginTop="27dp"
+                android:text="Choose Destination"
+                android:textColor="#123B5D"
                 android:textSize="18sp"
                 android:textStyle="bold"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="4dp"
-                android:text="📍 Cox's Bazar"
-                android:textColor="#777777"
-                android:textSize="13sp"/>
+            <!-- DESTINATION FILTERS -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="12dp"
+                android:scrollbars="none">
 
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- ALL PLACES -->
+                    <TextView
+                        android:id="@+id/allPlacesFilter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:gravity="center"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:background="#123B5D"
+                        android:text="All Places"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp"
+                        android:textStyle="bold"/>
+
+                    <!-- COX'S BAZAR -->
+                    <TextView
+                        android:id="@+id/coxBazarFilter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_marginStart="10dp"
+                        android:gravity="center"
+                        android:paddingStart="18dp"
+                        android:paddingEnd="18dp"
+                        android:background="#FFFFFF"
+                        android:text="Cox's Bazar"
+                        android:textColor="#123B5D"
+                        android:textSize="13sp"/>
+
+                    <!-- SAJEK -->
+                    <TextView
+                        android:id="@+id/sajekFilter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_marginStart="10dp"
+                        android:gravity="center"
+                        android:paddingStart="18dp"
+                        android:paddingEnd="18dp"
+                        android:background="#FFFFFF"
+                        android:text="Sajek"
+                        android:textColor="#123B5D"
+                        android:textSize="13sp"/>
+
+                    <!-- SYLHET -->
+                    <TextView
+                        android:id="@+id/sylhetFilter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_marginStart="10dp"
+                        android:gravity="center"
+                        android:paddingStart="18dp"
+                        android:paddingEnd="18dp"
+                        android:background="#FFFFFF"
+                        android:text="Sylhet"
+                        android:textColor="#123B5D"
+                        android:textSize="13sp"/>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <!-- POPULAR HOTELS -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:gravity="center_vertical">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="৳ 8,500 / night"
-                    android:textColor="#1976D2"
-                    android:textSize="16sp"
+                    android:text="Popular Stays"
+                    android:textColor="#123B5D"
+                    android:textSize="21sp"
                     android:textStyle="bold"/>
 
+                <!-- EXPLORE ALL -->
                 <TextView
+                    android:id="@+id/exploreAll"
                     android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:gravity="center"
-                    android:paddingStart="15dp"
-                    android:paddingEnd="15dp"
-                    android:background="#1976D2"
-                    android:text="Book Now"
-                    android:textColor="#FFFFFF"
-                    android:textSize="13sp"/>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <!-- Hotel 2 -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="15dp"
-            android:orientation="vertical"
-            android:background="#FFFFFF"
-            android:elevation="4dp">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="130dp"
-                android:src="@drawable/sajek"
-                android:scaleType="centerCrop"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="10dp"
-                android:text="Sajek Valley Resort"
-                android:textColor="#222222"
-                android:textSize="18sp"
-                android:textStyle="bold"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="4dp"
-                android:text="📍 Sajek Valley"
-                android:textColor="#777777"
-                android:textSize="13sp"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:gravity="center_vertical">
-
-                <TextView
-                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="৳ 5,000 / night"
-                    android:textColor="#1976D2"
-                    android:textSize="16sp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="Explore all  →"
+                    android:textColor="#B18A45"
+                    android:textSize="12sp"
                     android:textStyle="bold"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:gravity="center"
-                    android:paddingStart="15dp"
-                    android:paddingEnd="15dp"
-                    android:background="#1976D2"
-                    android:text="Book Now"
-                    android:textColor="#FFFFFF"
-                    android:textSize="13sp"/>
 
             </LinearLayout>
 
-        </LinearLayout>
+            <!-- SAYEMAN BEACH RESORT -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/sayemanCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp">
 
-        <!-- More Hotels -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="25dp"
-            android:text="More hotels coming soon..."
-            android:textColor="#777777"
-            android:textSize="14sp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#FFFFFF">
+
+                    <ImageView
+                        android:id="@+id/sayemanHotelImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/hotel_cox5"
+                        android:contentDescription="Sayeman Beach Resort"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="★ 4.8  |  Premium Resort"
+                            android:textColor="#B18A45"
+                            android:textSize="12sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="9dp"
+                            android:text="Sayeman Beach Resort"
+                            android:textColor="#123B5D"
+                            android:textSize="20sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Marine Drive Road, Cox's Bazar"
+                            android:textColor="#788795"
+                            android:textSize="13sp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Luxury Sea View Stay"
+                                android:textColor="#123B5D"
+                                android:textSize="13sp"
+                                android:textStyle="bold"/>
+
+                            <Button
+                                android:id="@+id/btnSayemanDetails"
+                                android:layout_width="wrap_content"
+                                android:layout_height="48dp"
+                                android:text="View Details"
+                                android:textAllCaps="false"
+                                android:textColor="#FFFFFF"
+                                android:backgroundTint="#123B5D"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- LONG BEACH HOTEL -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/longBeachCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#FFFFFF">
+
+                    <ImageView
+                        android:id="@+id/longBeachHotelImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/long_beach4"
+                        android:contentDescription="Long Beach Hotel"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="★ 4.7  |  Luxury Hotel"
+                            android:textColor="#B18A45"
+                            android:textSize="12sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="9dp"
+                            android:text="Long Beach Hotel"
+                            android:textColor="#123B5D"
+                            android:textSize="20sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Kolatoli Road, Cox's Bazar"
+                            android:textColor="#788795"
+                            android:textSize="13sp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Comfortable Luxury Stay"
+                                android:textColor="#123B5D"
+                                android:textSize="13sp"
+                                android:textStyle="bold"/>
+
+                            <Button
+                                android:id="@+id/btnLongBeachDetails"
+                                android:layout_width="wrap_content"
+                                android:layout_height="48dp"
+                                android:text="View Details"
+                                android:textAllCaps="false"
+                                android:textColor="#FFFFFF"
+                                android:backgroundTint="#123B5D"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- MEGH RODDUR HILL RESORT - SAJEK -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/meghRoddurCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#FFFFFF">
+
+                    <ImageView
+                        android:id="@+id/meghRoddurHotelImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/megh_roddur1"
+                        android:contentDescription="Megh Roddur Hill Resort"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SAJEK VALLEY"
+                            android:textColor="#B18A45"
+                            android:textSize="12sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="9dp"
+                            android:text="Megh Roddur Hill Resort"
+                            android:textColor="#123B5D"
+                            android:textSize="20sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Sajek Valley, Rangamati"
+                            android:textColor="#788795"
+                            android:textSize="13sp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Hill View Resort"
+                                android:textColor="#123B5D"
+                                android:textSize="13sp"
+                                android:textStyle="bold"/>
+
+                            <Button
+                                android:id="@+id/btnMeghRoddurDetails"
+                                android:layout_width="wrap_content"
+                                android:layout_height="48dp"
+                                android:text="View Details"
+                                android:textAllCaps="false"
+                                android:textColor="#FFFFFF"
+                                android:backgroundTint="#123B5D"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
 
     </LinearLayout>
 
