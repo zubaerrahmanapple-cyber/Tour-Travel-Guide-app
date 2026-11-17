@@ -84,7 +84,7 @@ public class DashboardActivity extends AppCompatActivity {
                         break;
 
                     case "Restaurants":
-                        showMessage("Restaurants page will be added soon!");
+                        openRestaurants();
                         break;
 
                     case "Transport":
@@ -111,8 +111,7 @@ public class DashboardActivity extends AppCompatActivity {
 
         btnHotels.setOnClickListener(v -> openHotels());
 
-        btnRestaurants.setOnClickListener(v ->
-                showMessage("Restaurants page will be added soon!"));
+        btnRestaurants.setOnClickListener(v -> openRestaurants());
 
         btnTransport.setOnClickListener(v ->
                 showMessage("Transport page will be added soon!"));
@@ -197,7 +196,7 @@ public class DashboardActivity extends AppCompatActivity {
                 query.contains("cafe") ||
                 query.contains("dining")) {
 
-            showMessage("Restaurants page will be added soon!");
+            openRestaurants();
         }
 
         // TRANSPORT
@@ -241,6 +240,17 @@ public class DashboardActivity extends AppCompatActivity {
         Intent intent = new Intent(
                 DashboardActivity.this,
                 HotelsActivity.class
+        );
+
+        startActivity(intent);
+    }
+
+    // OPEN RESTAURANTS
+    private void openRestaurants() {
+
+        Intent intent = new Intent(
+                DashboardActivity.this,
+                RestaurantsActivity.class
         );
 
         startActivity(intent);

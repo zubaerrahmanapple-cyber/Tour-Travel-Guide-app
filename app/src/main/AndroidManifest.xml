@@ -9,6 +9,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ZeroBite">
         <activity
+            android:name=".RestaurantDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RestaurantListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RestaurantsActivity"
+            android:exported="false" />
+        <activity
             android:name=".HotelDetailsActivity"
             android:exported="false" />
         <activity
